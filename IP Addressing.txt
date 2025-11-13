@@ -1,0 +1,20 @@
+# IP Addressing Plan - Smart Office Network System
+
+## VLANs and Subnets
+
+| VLAN ID | Department            | Network Address  | Subnet Mask       | Default Gateway     |
+|--------:|-----------------------|------------------:|-------------------:|---------------------:|
+| 10      | Computer Science      | 192.168.10.0     | 255.255.255.0      | 192.168.10.1         |
+| 20      | Business Management   | 192.168.20.0     | 255.255.255.0      | 192.168.20.1         |
+| 30      | Healthcare            | 192.168.30.0     | 255.255.255.0      | 192.168.30.1         |
+| 40      | Commerce & Art        | 192.168.40.0     | 255.255.255.0      | 192.168.40.1         |
+| 50      | Engineering           | 192.168.50.0     | 255.255.255.0      | 192.168.50.1         |
+| 101     | Server Room           | 192.168.101.0    | 255.255.255.0      | 192.168.101.1        |
+
+## Firewall / Core networks
+
+- **Firewall (Inside)**: 192.168.100.0/24  
+  - Gateway (ASA inside): **192.168.100.1**
+
+- **Firewall (Outside / Public)**: 203.0.113.0/24  
+  - ASA Outside IP (sample): **203.0.113.2**

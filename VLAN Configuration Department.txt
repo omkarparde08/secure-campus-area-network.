@@ -1,0 +1,118 @@
+2. VLAN Configuration (Department-Wise)
+Each department is isolated using VLANs for security and management.
+On the Multilayer Switch (Core Switch – 3650-24PS)
+Switch(config)# vlan 10
+Switch(config-vlan)# name Computer_Science
+Switch(config-vlan)# exit
+Switch(config)# vlan 20
+Switch(config-vlan)# name Business_Management
+Switch(config-vlan)# exit
+Switch(config)# vlan 30
+Switch(config-vlan)# name Healthcare
+Switch(config-vlan)# exit
+Switch(config)# vlan 40
+Switch(config-vlan)# name Commerce_Art
+Switch(config-vlan)# exit
+Switch(config)# vlan 50
+Switch(config-vlan)# name Engineering
+Switch(config-vlan)# exit
+Switch(config)# vlan 101
+Switch(config-vlan)# name Server_Room
+Switch(config-vlan)# exit
+3. Assign VLAN Interfaces
+Switch(config)# interface vlan 10
+Switch(config-if)# ip address 192.168.10.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 20
+Switch(config-if)# ip address 192.168.20.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 30
+Switch(config-if)# ip address 192.168.30.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 40
+Switch(config-if)# ip address 192.168.40.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 50
+Switch(config-if)# ip address 192.168.50.1 255.255.255.0
+Switch(config-if)# no shutdown
+Switch(config)# interface vlan 101
+Switch(config-if)# ip address 192.168.101.1 255.255.255.0
+Switch(config-if)# no shutdown
+4. Trunk Configuration (Connecting Access Switches):
+Computer Science Department (VLAN 10)
+Switch(config)# interface gigabitEthernet1/0/2
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all
+Switch(config-if)# no shutdown
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10 (change VLAN as per department)
+Switch(config-if)# no shutdown
+
+
+ IP Configuration for PCs and Printers:
+Device IP Address Subnet Mask Default
+Gateway
+PC1 192.168.10.2 255.255.255.0 192.168.10.1
+PC2 192.168.10.3 255.255.255.0 192.168.10.1
+Printer 192.168.10.4 255.255.255.0 192.168.10.1
+Business Managemet Department (VLAN 20)
+Switch(config)# interface gigabitEthernet1/0/3
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all
+Switch(config-if)# no shutdown
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20 (change VLAN as per department)
+Switch(config-if)# no shutdown
+IP Configuration for PCs and Printers:
+Device IP Address Subnet Mask Default
+Gateway
+PC1 192.168.20.2 255.255.255.0 192.168.20.1
+PC2 192.168.20.3 255.255.255.0 192.168.20.1
+Printer 192.168.20.4 255.255.255.0 192.168.20.1
+Healthcare Department (VLAN 30)
+Switch(config)# interface gigabitEthernet1/0/4
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all
+Switch(config-if)# no shutdown
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 3 (change VLAN as per department)
+Switch(config-if)# no shutdown
+IP Configuration for PCs and Printers:
+Device IP Address Subnet Mask Default
+Gateway
+PC1 192.168.30.2 255.255.255.0 192.168.30.1
+PC2 192.168.30.3 255.255.255.0 192.168.30.1
+Printer 192.168.30.4 255.255.255.0 192.168.30.1
+Commerece &ArrtDepartment (VLAN 40)
+Switch(config)# interface gigabitEthernet1/0/5
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all
+Switch(config-if)# no shutdown
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 40 (change VLAN as per department)
+Switch(config-if)# no shutdown
+IP Configuration for PCs and Printers:
+Device IP Address Subnet Mask Default
+Gateway
+PC1 192.168.40.2 255.255.255.0 192.168.40.1
+PC2 192.168.40.3 255.255.255.0 192.168.40.1
+Printer 192.168.40.4 255.255.255.0 192.168.40.1
+Enginnering Department (VLAN 50)
+Switch(config)# interface gigabitEthernet1/0/6
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all
+Switch(config-if)# no shutdown
+Switch(config)# interface fa0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 50 (change VLAN as per department)
+Switch(config-if)# no shutdown
+IP Configuration for PCs and Printers:
+Device IP Address Subnet Mask Default
+Gateway
+PC1 192.168.50.2 255.255.255.0 192.168.50.1
+PC2 192.168.50.3 255.255.255.0 192.168.50.1
+Printer 192.168.50.4 255.255.255.0 192.168.50.1

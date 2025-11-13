@@ -1,0 +1,13 @@
+Network Overview
+Component Description
+Core Layer Multilayer switch (Cisco 3650-24PS) for inter-VLAN routing
+and backbone connection.
+Distribution Layer Departmental access switches (Cisco 2960-24TT).
+Access Layer PCs, laptops, printers, smartphones, and wireless access points.
+Firewall Cisco ASA 5506-X ensures secure traffic between internal and
+external networks.
+Router Cisco 2911 connects the internal network to the external WAN.
+Server Room Web, FTP, DNS, Email servers with internal and cloud
+connectivity.
+Wireless LAN Controller
+(WLC) Manages wireless access points and mobile device connections.

@@ -1,0 +1,30 @@
+Secure Campus Area Network Systems Project
+
+Title: Secure Campus Area Network Systems
+Objective: To design and implement a secure, scalable, and efficient
+campus area network (CAN) that connects multiple departments,
+branches, and servers while maintaining high performance and data
+security.
+
+Description: This project focuses on building a campus-wide network
+infrastructure integrating various departments such as Computer
+Science, Business Management, Engineering, and Healthcare. The
+network includes multiple VLANs, routers, switches, servers (FTP,
+Email, DHCP, Web), and wireless access points to provide
+connectivity for PCs, laptops, tablets, and smartphones. The system
+ensures secure communication through router configurations,
+subnetting, and access control mechanisms.
+
+Key Features: Segregated VLANs for each department Centralized
+DHCP and DNS services Secure routing between branches using
+static and dynamic routes Integrated Wireless LAN Controller (WLC)
+Server Room with Email, Web, and FTP services Branch connectivity
+with static IP and serial communication Enhanced network
+monitoring and scalability
+
+
+Tools Used: Cisco Packet Tracer, Networking Devices (Router,
+Switch, Access Point), WLC, Server, PC, and Laptop.
+Outcome: A fully functional, secure, and efficient campus network
+that supports departmental communication, resource sharing, and
+scalability for future expansions
